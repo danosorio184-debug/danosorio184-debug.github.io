@@ -13,7 +13,7 @@
 }
 
 .slides img {
-  width: 33.33%; /* 3 imágenes visibles por sección */
+  width: 33.33%; /* 3 imágenes visibles en escritorio */
   height: 200px;
   object-fit: cover;
 }
@@ -39,8 +39,8 @@
 
 /* --- CONTENEDOR --- */
 .contenedor {
-  max-width: 1600px;   /* ancho máximo de la página */
-  margin: 0 auto;      /* centra todo el contenido */
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 /* --- ESTILOS GENERALES --- */
@@ -84,25 +84,24 @@ nav a {
 }
 
 .lista-productos {
-  display: flex;              /* activa flexbox */
-  justify-content: center;    /* centra horizontalmente */
-  gap: 20px;                  /* espacio entre productos */
-  flex-wrap: nowrap;          /* 🔒 evita que bajen a otra línea */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* ✅ ahora se acomodan en varias filas */
 }
 
 .producto {
   background: white;
   padding: 1rem;
   border-radius: 8px;
-  width: 220px;               /* tamaño fijo */
+  width: 220px;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .producto img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;          /* mantiene proporción sin deformar */
+  width: 100%;   /* ✅ se adapta al contenedor */
+  height: auto;  /* ✅ mantiene proporción */
   border-radius: 8px;
 }
 
@@ -201,4 +200,21 @@ button:hover {
 
 .carrito button:hover {
   background-color: #b71c1c;
+}
+
+/* --- MEDIA QUERIES --- */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* ✅ menú vertical en móviles */
+    align-items: center;
+  }
+
+  .producto {
+    width: 100%; /* ✅ productos ocupan todo el ancho */
+    max-width: 300px;
+  }
+
+  .slides img {
+    width: 100%; /* ✅ slider muestra 1 imagen por vez */
+  }
 }
