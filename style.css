@@ -1,0 +1,204 @@
+/* --- SLIDER --- */
+.slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 300px;
+  margin: 20px auto;
+}
+
+.slides {
+  display: flex;
+  transition: transform 1s ease;
+}
+
+.slides img {
+  width: 33.33%; /* 3 imágenes visibles por sección */
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Botones de navegación */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(46, 125, 50, 0.8);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 5px;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+.prev:hover, .next:hover {
+  background: #1b5e20;
+}
+
+/* --- CONTENEDOR --- */
+.contenedor {
+  max-width: 1600px;   /* ancho máximo de la página */
+  margin: 0 auto;      /* centra todo el contenido */
+}
+
+/* --- ESTILOS GENERALES --- */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0; 
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+header {
+  background-color: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+nav {
+  background-color: #388e3c;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* --- PRODUCTOS --- */
+.productos {
+  margin: 2rem 0;
+}
+
+.productos h2 {
+  text-align: center;
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+
+.lista-productos {
+  display: flex;              /* activa flexbox */
+  justify-content: center;    /* centra horizontalmente */
+  gap: 20px;                  /* espacio entre productos */
+  flex-wrap: nowrap;          /* 🔒 evita que bajen a otra línea */
+}
+
+.producto {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 220px;               /* tamaño fijo */
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.producto img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;          /* mantiene proporción sin deformar */
+  border-radius: 8px;
+}
+
+/* --- FORMULARIO --- */
+.formulario {
+  background: #e8f5e9;
+  padding: 2rem;
+  margin: 1rem;
+  border-radius: 8px;
+}
+
+/* --- FOOTER --- */
+footer {
+  background-color: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+/* --- BOTONES --- */
+button {
+  background-color: #388e3c;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #1b5e20;
+}
+
+/* --- CATEGORÍAS --- */
+.categorias {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.cuadros {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cuadro {
+  background: #f1f8e9;
+  padding: 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #2e7d32;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.cuadro:hover {
+  background: #c8e6c9;
+  transform: scale(1.05);
+}
+
+/* --- CARRITO --- */
+.carrito {
+  background: #ffffff;
+  padding: 2rem;
+  margin: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.carrito h2 {
+  color: #2e7d32;
+}
+
+.carrito ul {
+  list-style: none;
+  padding: 0;
+}
+
+.carrito li {
+  background: #f1f8e9;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.carrito button {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.carrito button:hover {
+  background-color: #b71c1c;
+}
